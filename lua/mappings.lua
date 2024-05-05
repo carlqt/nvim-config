@@ -23,9 +23,6 @@ vim.cmd.abbreviate("bc", "bp|bd #<cr>")
 -- Close other buffers
 vim.cmd.abbreviate("bonly", "%bd|e #<cr>")
 
--- Shortcut key to open neotree file explorer (ctrl+n)
-vim.keymap.set("n", "<C-n>", ":Neotree toggle<cr>", options)
-
 -- Shortcut keys for telescope plugin
 -- Helps finding files and text searches
 local builtin = require("telescope.builtin")
