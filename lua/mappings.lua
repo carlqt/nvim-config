@@ -6,7 +6,7 @@ local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
-vim.api.nvim_create_user_command("CopyRelPath", "call setreg('+', expand('%'))", {})
+vim.api.nvim_create_user_command("CopyRelPath", "call setreg('+', expand('%:.'))", {})
 
 -- Mapping "jj" to Escape
 local options = { noremap = true, silent = true }
