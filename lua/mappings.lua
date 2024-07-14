@@ -6,7 +6,11 @@ local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 
+-- Copy relative path of current file to clipboard
 vim.api.nvim_create_user_command("CopyRelPath", "call setreg('+', expand('%:.'))", {})
+
+-- Mapping "shift+e" to run command lua vim.diagnostic.open_float()
+vim.keymap.set("n", "<S-e>", "<Cmd>lua vim.diagnostic.open_float()<CR>", { noremap = true, silent = true })
 
 -- Mapping "jj" to Escape
 local options = { noremap = true, silent = true }
