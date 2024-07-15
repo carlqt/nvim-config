@@ -11,7 +11,6 @@ capabilities.textDocument.foldingRange = {
   dynamicRegistration = false,
   lineFoldingOnly = true,
 }
-require("ufo").setup()
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
