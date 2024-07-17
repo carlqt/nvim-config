@@ -38,3 +38,12 @@ vim.keymap.set("n", "<C-h>", "<Cmd>TmuxNavigateLeft<CR>", { silent = true })
 vim.keymap.set("n", "<C-j>", "<Cmd>TmuxNavigateDown<CR>", { silent = true })
 vim.keymap.set("n", "<C-k>", "<Cmd>TmuxNavigateUp<CR>", { silent = true })
 vim.keymap.set("n", "<C-l>", "<Cmd>TmuxNavigateRight<CR>", { silent = true })
+
+-- window resize
+-- resize width
+vim.keymap.set("v", "<C-u>", "5<C-w>>", { silent = true })
+vim.keymap.set("v", "<C-i>", "5<C-w><", { silent = true })
+
+-- resize height
+vim.keymap.set("v", "<C-j>", "5<C-w>+", { silent = true })
+vim.keymap.set("v", "<C-k>", "5<C-w>-", { silent = true })
