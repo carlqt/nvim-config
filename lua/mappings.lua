@@ -47,3 +47,6 @@ vim.keymap.set("v", "<C-i>", "5<C-w><", { silent = true })
 -- resize height
 vim.keymap.set("v", "<C-j>", "5<C-w>+", { silent = true })
 vim.keymap.set("v", "<C-k>", "5<C-w>-", { silent = true })
+
+-- mappings for debugger (nvim-dap)
+require "plugins.debugger.mappings"
