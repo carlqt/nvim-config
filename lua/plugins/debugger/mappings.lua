@@ -1,10 +1,10 @@
 vim.keymap.set("n", "<Leader>b", function()
   require("dap").toggle_breakpoint()
-end)
+end, { desc = "Toggle Breakpoint" })
 
 vim.keymap.set("n", "<leader>td", function()
   require("dap-go").debug_test()
-end, { silent = true })
+end, { silent = true, desc = "Debug Test" })
 
 vim.keymap.set("n", "<F5>", function()
   require("dap").continue()
