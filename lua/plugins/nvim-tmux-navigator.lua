@@ -1,7 +1,7 @@
 local plugins = {}
 local navigator = {
   "christoomey/vim-tmux-navigator",
-  lazy = false,
+  lazy = true,
   cmd = {
     "TmuxNavigateLeft",
     "TmuxNavigateDown",
