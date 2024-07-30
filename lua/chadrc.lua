@@ -10,7 +10,7 @@ M.ui = {
   hl_override = {
     TelescopeSelection = {
       bold = true,
-      fg = "#D79921",
+      bg = "#3909bd",
     },
   },
 
