@@ -8,12 +8,7 @@ end, { silent = true, desc = "Debug Test" })
 
 vim.keymap.set("n", "<F5>", function()
   require("dap").continue()
-end)
-
--- dap-ui has this opened by default already
--- vim.keymap.set("n", "<Leader>dr", function()
---   require("dap").repl.open()
--- end)
+end, { silent = true, desc = "Start/Continue Debug" })
 
 vim.keymap.set({ "n", "v" }, "<Leader>dp", function()
   require("dap.ui.widgets").preview()
@@ -21,10 +16,10 @@ end)
 
 vim.keymap.set("n", "<F10>", function()
   require("dap").step_over()
-end)
+end, { silent = true, desc = "Step Over" })
 vim.keymap.set("n", "<F11>", function()
   require("dap").step_into()
-end)
+end, { silent = true, desc = "Step Into" })
 vim.keymap.set("n", "<F12>", function()
   require("dap").step_out()
-end)
+end, { silent = true, desc = "Step Out" })
