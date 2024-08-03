@@ -48,5 +48,9 @@ vim.keymap.set("v", "<C-i>", "5<C-w><", { silent = true })
 vim.keymap.set("v", "<C-j>", "5<C-w>+", { silent = true })
 vim.keymap.set("v", "<C-k>", "5<C-w>-", { silent = true })
 
+-- gitsigns commands
+vim.cmd.abbreviate("gb", "Gitsigns toggle_current_line_blame")
+vim.cmd.abbreviate("gd", "Gitsigns preview_hunk") -- Also available via <leader>ph
+
 -- mappings for debugger (nvim-dap)
 require "plugins.debugger.mappings"
