@@ -17,6 +17,7 @@ return {
         "typescript",
         "javascript",
         "ruby",
+        "hcl",
         "rbs",
       },
     },
