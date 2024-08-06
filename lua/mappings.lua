@@ -1,6 +1,14 @@
 require "nvchad.mappings"
+-- Deleting default keybindings
+-- Do not add overrides in this space and keep it specific for deleting
 
--- add yours here
+-- Remove keymap for horizontal terminal
+vim.keymap.del("n", "<leader>h")
+-- Remove keymap for veritcal terminal
+vim.keymap.del("n", "<leader>v")
+
+-- start adding mappings below
+-- add any overrides here too
 
 local map = vim.keymap.set
 
@@ -52,5 +60,4 @@ vim.keymap.set("v", "<C-k>", "5<C-w>-", { silent = true })
 vim.cmd.abbreviate("gb", "Gitsigns toggle_current_line_blame")
 vim.cmd.abbreviate("gd", "Gitsigns preview_hunk") -- Also available via <leader>ph
 
--- mappings for debugger (nvim-dap)
 require "plugins.debugger.mappings"

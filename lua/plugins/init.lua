@@ -6,10 +6,6 @@ return {
       require "configs.conform"
     end,
   },
-
-  -- These are some examples, uncomment them if you want to see them work!
-  --
-  --
   {
     "nvim-treesitter/nvim-treesitter",
     opts = {
