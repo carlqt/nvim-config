@@ -1,3 +1,5 @@
+vim.keymap.set("n", "<leader>lq", "<cmd>lua vim.lsp.buf.code_action()<cr>", { silent = true })
+
 return {
   {
     "williamboman/mason.nvim",

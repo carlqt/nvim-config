@@ -60,4 +60,6 @@ vim.keymap.set("v", "<C-k>", "5<C-w>-", { silent = true })
 vim.cmd.abbreviate("gb", "Gitsigns toggle_current_line_blame")
 vim.cmd.abbreviate("gd", "Gitsigns preview_hunk") -- Also available via <leader>ph
 
+-- conform
+
 require "plugins.debugger.mappings"

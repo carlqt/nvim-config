@@ -1,6 +1,7 @@
 local options = {
   formatters_by_ft = {
     lua = { "stylua" },
+    typescript = { "prettier" },
     -- css = { "prettier" },
     -- html = { "prettier" },
     go = { "goimports" },
