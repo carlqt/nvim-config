@@ -20,6 +20,7 @@ return {
         "hcl",
         "rbs",
         "graphql",
+        "yaml",
       },
     },
   },
