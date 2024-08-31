@@ -5,7 +5,8 @@
 local M = {}
 
 M.ui = {
-  theme = "chadracula-evondev",
+  theme = "tokyodark", -- Main theme at home to avoid monitor flickering
+  -- theme = "chadracula-evondev", -- Usual theme
 
   hl_override = {
     TelescopeSelection = {
