@@ -23,7 +23,18 @@ return {
 
       local handlers = {
         function(server_name)
-          require("lspconfig")[server_name].setup {
+          local config = require("lspconfig")
+
+          -- tsserver was renamed to ts_ls
+          if server_name == 'tsserver' then
+            return config.ts_ls.setup({
+              on_attach = on_attach,
+              on_init = on_init,
+              capabilities = capabilities,
+            })
+          end
+
+          config[server_name].setup {
             on_attach = on_attach,
             on_init = on_init,
             capabilities = capabilities,
