@@ -28,6 +28,16 @@ local options = {
   --   timeout_ms = 5000,
   --   lsp_fallback = true,
   -- },
+
+  format_on_save = function(_)
+    local filetype = vim.bo.filetype
+    if not filetype:match("typescript") then
+      return {
+        timeout_ms = 5000,
+        lsp_format = "fallback"
+      }
+    end
+  end
 }
 
 require("conform").setup(options)
