@@ -1,23 +1,10 @@
-local plugins = {}
-local navigator = {
-  "christoomey/vim-tmux-navigator",
-  lazy = true,
-  cmd = {
-    "TmuxNavigateLeft",
-    "TmuxNavigateDown",
-    "TmuxNavigateUp",
-    "TmuxNavigateRight",
-    "TmuxNavigatePrevious",
-  },
-  keys = {
-    { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-    { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-    { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-    { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-    { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
-  },
+-- vim.keymap.set("n", "<C-h>", function() require("wezterm-move").move "h" end, { silent = true })
+-- vim.keymap.set("n", "<C-j>", function() require("wezterm-move").move "j" end, { silent = true })
+-- vim.keymap.set("n", "<C-k>", function() require("wezterm-move").move "k" end, { silent = true })
+-- vim.keymap.set("n", "<C-l>", function() require("wezterm-move").move "l" end, { silent = true })
+
+return {
+  {
+    "letieu/wezterm-move.nvim",
+  }
 }
-
-plugins = { navigator }
-
-return plugins

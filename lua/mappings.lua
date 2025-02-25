@@ -41,11 +41,11 @@ local builtin = require "telescope.builtin"
 vim.keymap.set("n", "<C-p>", builtin.find_files, { desc = "Find Files" })
 vim.keymap.set("n", "<C-f><C-f>", builtin.live_grep, { desc = "Find word" })
 
--- tmux navigate
-vim.keymap.set("n", "<C-h>", "<Cmd>TmuxNavigateLeft<CR>", { silent = true })
-vim.keymap.set("n", "<C-j>", "<Cmd>TmuxNavigateDown<CR>", { silent = true })
-vim.keymap.set("n", "<C-k>", "<Cmd>TmuxNavigateUp<CR>", { silent = true })
-vim.keymap.set("n", "<C-l>", "<Cmd>TmuxNavigateRight<CR>", { silent = true })
+-- wezterm-move keymaps
+vim.keymap.set("n", "<C-h>", function() require("wezterm-move").move "h" end, { silent = true })
+vim.keymap.set("n", "<C-j>", function() require("wezterm-move").move "j" end, { silent = true })
+vim.keymap.set("n", "<C-k>", function() require("wezterm-move").move "k" end, { silent = true })
+vim.keymap.set("n", "<C-l>", function() require("wezterm-move").move "l" end, { silent = true })
 
 -- window resize
 -- resize width

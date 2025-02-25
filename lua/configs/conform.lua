@@ -31,13 +31,16 @@ local options = {
 
   format_on_save = function(_)
     local filetype = vim.bo.filetype
-    if not filetype:match("typescript") then
-      return {
-        timeout_ms = 5000,
-        lsp_format = "fallback"
-      }
+
+    if filetype:match "typescript" or filetype:match "html" then
+      return
     end
-  end
+
+    return {
+      timeout_ms = 5000,
+      lsp_format = "fallback",
+    }
+  end,
 }
 
 require("conform").setup(options)
