@@ -1,4 +1,14 @@
 if vim.g.vscode then
+  -- local vscode = require "vscode-neovim"
+
+  -- vim.keymap.set("n", "<C-i>", function()
+  --   vscode.action "workbench.action.nextEditorInGroup"
+  -- end)
+
+  -- vim.keymap.set("n", "<C-u>", function()
+  --   vscode.action "workbench.action.previousEditorInGroup"
+  -- end)
+  vim.opt.clipbaord:append "unnamedplus"
 else
   vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
   vim.g.mapleader = " "
